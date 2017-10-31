@@ -1,0 +1,12 @@
+using System;
+
+Console.Writeln("Printing first  100 even and odd numbers");
+
+for(int i=1;i<101;i++){
+if(i%2==0){
+Println("%d",i);
+
+}
+else
+Println("%d",i);
+}
