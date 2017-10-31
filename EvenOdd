@@ -1,18 +1,20 @@
+//using libraries by using keyword in C#
 using System;
 using System.Collections.Generic;
 using System.LINQ;
 using System.Text;
 
+public class Test{
 static void Main(String[] args){
 
 Console.Writeln("Printing first  100 even and odd numbers");
-
+// even numbers divisble by 2
 Console.Writeln("Even Numbers");
 for(int i=1;i<101;i++){
 if(i%2==0){
 Console.Writeln(i);
 }
-
+// odd numbers not divisible by 2
 Console.Writeln("Odd Numbers");
 for(int i=0;i<101;i++){
 if(i%2!=0){
@@ -21,20 +23,24 @@ Console.Writeln(i);
 }
 
 Console.Writeln("Printing first 100 prime numebrs");
-
-        Console.WriteLine(2);
-        for(int i=3;i<=101;i++)
+/* Prime numbers are those numbers which are divided by only themselves and 1,
+  like 2,3,5,7,11,13,....etc
+  other numbers are divisible by other numbers are composite numbers like 4,6,8,9,10 etc are composite.
+  */
+        Console.WriteLine(2); //first prime number without loop
+        for(int i=3;i<=100;i++)// starting outer loop from 3
         {
-            bool isPrime=true;
-            for(int j=2;j<=Math.Sqrt(i);j++)
+            bool isPrime=true; // initially isPrime true
+            for(int j=2;j<=Math.Sqrt(i);j++) // inner loop for comparison 
             {
+             // if remainder is 0, then it is composite
                 if(i%j==0)
                 {
                     isPrime=false;
                     break;
                 }
             }
-            if(isPrime)
+            if(isPrime)//if prime condition is true then print prime no,
             {
                 Console.WriteLine(i);
             }
@@ -42,3 +48,4 @@ Console.Writeln("Printing first 100 prime numebrs");
 
 }
 
+}
